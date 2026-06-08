@@ -1,0 +1,104 @@
+/* ============================================================
+   LANDCORE — form controls
+   Built on the design tokens (colors_and_type.css). The kit ships
+   no input styles; these match its radii, borders, and type.
+   ============================================================ */
+.demo-form {
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 26px;
+  color: var(--navy);
+}
+.demo-form h4 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.demo-form .sub {
+  font-size: 13.5px;
+  color: var(--gray-500);
+  margin: 0 0 18px;
+}
+
+.lc-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.lc-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+  letter-spacing: -0.01em;
+}
+.lc-input,
+.lc-textarea {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--navy);
+  background: #fff;
+  padding: 11px 13px;
+  border: var(--border);
+  border-radius: var(--r-sm);
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.lc-textarea {
+  resize: vertical;
+  min-height: 84px;
+  line-height: 1.5;
+}
+.lc-input::placeholder,
+.lc-textarea::placeholder {
+  color: var(--gray-400);
+}
+.lc-input:focus,
+.lc-textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-050);
+}
+.lc-input[aria-invalid="true"],
+.lc-textarea[aria-invalid="true"] {
+  border-color: #DC2626;
+}
+.lc-field .err {
+  font-size: 12.5px;
+  color: #DC2626;
+}
+
+.demo-form .btn {
+  width: 100%;
+  justify-content: center;
+}
+.demo-form .btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-status {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border-radius: var(--r-sm);
+}
+.form-status.ok {
+  background: var(--ok-bg);
+  color: #15803D;
+}
+.form-status.bad {
+  background: #FEECEC;
+  color: #B91C1C;
+}
+.form-fallback {
+  font-size: 13px;
+  color: var(--gray-500);
+  margin: 14px 0 0;
+}
+.form-fallback a {
+  color: var(--blue);
+  font-weight: 600;
+}
