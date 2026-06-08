@@ -102,3 +102,25 @@
   color: var(--blue);
   font-weight: 600;
 }
+
+/* ---------- Skip-to-content link (keyboard a11y) ---------- */
+/* Hidden until focused, then pinned top-left over the nav. */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -64px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}

@@ -1,13 +1,49 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 // Design system: tokens first, then the kit's layout/component classes.
 import "../styles/colors_and_type.css";
 import "../styles/kit.css";
 import "../styles/forms.css";
 
+const SITE_URL = "https://www.landcoreai.com";
+const TITLE = "Landcore — Know It. Approve It. Build It.";
+const DESCRIPTION =
+  "AI-powered site feasibility, zoning intelligence, and permit management for real estate developers. Get a go/no-go score in 48 hours, not 48 days.";
+
 export const metadata: Metadata = {
-  title: "Landcore — Know It. Approve It. Build It.",
-  description:
-    "AI-powered site feasibility, zoning intelligence, and permit management for real estate developers.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  applicationName: "Landcore",
+  keywords: [
+    "site feasibility",
+    "zoning analysis",
+    "entitlement",
+    "permit management",
+    "real estate development",
+    "land development software",
+    "feasibility study",
+  ],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Landcore",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
 };
 
 export default function RootLayout({
@@ -24,12 +60,23 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/*
+          The design kit's colors_and_type.css (which must not be altered)
+          references the literal "Geist" / "Geist Mono" families, so the font
+          is loaded via <link> rather than next/font. preconnect + display=swap
+          keep it non-blocking.
+        */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }
