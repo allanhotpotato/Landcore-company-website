@@ -7,9 +7,9 @@ import "../styles/kit.css";
 import "../styles/forms.css";
 
 const SITE_URL = "https://www.landcoreai.com";
-const TITLE = "Landcore — Know It. Approve It. Build It.";
+const TITLE = "Landcore — Permit work, backed by the data developers wish they had.";
 const DESCRIPTION =
-  "AI-powered site feasibility, zoning intelligence, and permit management for real estate developers. Get a go/no-go score in 48 hours, not 48 days.";
+  "Every parcel arrives pre-wired with the zoning, overlays, utilities, and code that govern it. Then Landcore drafts the permit and runs the cycle.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

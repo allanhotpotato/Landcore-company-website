@@ -21,8 +21,8 @@ export function WhoItsFor() {
       <div className="container">
         <SectionHead
           eyebrow="Who it's for"
-          title="Built for every asset class you underwrite."
-          intro="One parcel or a hundred — Landcore scores the way each asset class actually gets approved."
+          title="Live data for every asset class you underwrite."
+          intro="Multifamily to megawatts: the layers behind each approval differ, and so does the data Landcore pulls."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {cols.map((c) => (
@@ -48,18 +48,18 @@ export function WhoItsFor() {
 
 export function Results() {
   const stats = [
-    { n: "48", u: "h", l: "Median time to a feasibility verdict" },
-    { n: "$150K", u: "+", l: "Average consultant spend avoided per project" },
-    { n: "92", u: "%", l: "First-pass inspection rate with Landcore briefs" },
-    { n: "3.5", u: "×", l: "More sites screened by the same team" },
+    { n: "10", u: "", l: "States with live data" },
+    { n: "90", u: "d", l: "Refresh on the data underneath" },
+    { n: "48", u: "h", l: "From parcel to permit-ready" },
+    { n: "$150K", u: "+", l: "Specialist spend avoided per project" },
   ];
   const rows = [
-    ["Time to feasibility", "6–12 weeks", "48 hours"],
-    ["People involved", "5–10 consultants", "One system"],
+    ["Time to data pull", "Days, by hand", "Already in"],
+    ["Zoning lookups", "PDF, by hand", "Pre-decoded"],
+    ["Overlay analysis", "Layer by layer", "All at once"],
+    ["Inspections passed first try", "Coin flip", "92%"],
+    ["Cycle visibility", "Email threads", "One live timeline"],
     ["Cost per site", "$150K+", "A fraction"],
-    ["Zoning analysis", "Manual, PDF by PDF", "Decoded automatically"],
-    ["Permit visibility", "Email threads", "One live timeline"],
-    ["Next step", "Unclear", "What, why, and by when"],
   ];
   return (
     <section className="section bg-navy blueprint-wrap" id="results">
@@ -67,8 +67,8 @@ export function Results() {
       <div className="container">
         <SectionHead
           eyebrow="Results"
-          title="The math developers came for."
-          intro="Faster decisions, fewer people, lower spend — measured on real projects."
+          title="Math you can run because the data's already in."
+          intro="Faster, with the underlying layers actually pulled. Measured on real projects."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {stats.map((s) => (
@@ -129,11 +129,11 @@ export function CTA() {
                 color: "#fff",
               }}
             >
-              Score your next site this week.
+              See what the data already knows about your next site.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--fg-on-blue-2)", maxWidth: 440 }}>
-              Bring a real parcel. We&apos;ll return a feasibility score in 48 hours and walk you
-              through exactly what to do, why, and by when.
+              Bring a real parcel. We&apos;ll show you what the data layer pulls in 60 seconds — and
+              the permit cycle Landcore would run.
             </p>
             <div style={{ marginTop: 30, display: "flex", gap: 12, flexWrap: "wrap" }}>
               <CalendlyButton variant="onblue" size="lg" icon="calendar-check">
@@ -159,11 +159,11 @@ export function Footer() {
     {
       h: "Product",
       links: [
-        ["Feasibility scoring", "#answer"],
-        ["Zoning intelligence", "#answer"],
-        ["AI email drafting", "#answer"],
-        ["Inspection briefs", "#how"],
-        ["Permit timeline", "#how"],
+        ["The data layer", "#how"],
+        ["Zoning decoding", "#answer"],
+        ["Submittal drafting", "#answer"],
+        ["Cycle visibility", "#answer"],
+        ["Inspection briefs", "#answer"],
       ],
     },
     {
@@ -192,8 +192,8 @@ export function Footer() {
           <div>
             <Logo dark />
             <p className="tagline">
-              AI-powered site feasibility, zoning intelligence, and permit management for real
-              estate developers. Know it. Approve it. Build it.
+              Live data on the country&apos;s busiest jurisdictions, plus the models and
+              intelligence to turn it into a permit-ready project. Parcel, permit, done.
             </p>
           </div>
           {cols.map((c) => (
