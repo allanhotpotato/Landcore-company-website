@@ -11,32 +11,30 @@ import {
 import { CTA, Footer, Results, WhoItsFor } from "@/components/bottom";
 import { HexStack, type HexTier } from "@/components/HexStack";
 
-// Baseline hex content. Each variant branch overrides these tiers
-// and the surrounding section copy.
 const TIERS: [HexTier, HexTier, HexTier] = [
   {
     label: "Intelligence",
     sparkle: true,
     bullets: [
-      "End-to-end permit decision engine",
+      "End-to-end cycle decisioning",
       "Agentic municipal drafting",
-      "Cycle visibility, owner by owner",
+      "Approval pathing per jurisdiction",
     ],
   },
   {
     label: "Models",
     bullets: [
-      "Code-grounded submittal generation",
+      "Code-grounded document generation",
       "Risk × jurisdiction routing",
-      "Inspection readiness models",
+      "Inspection-readiness models",
     ],
   },
   {
     label: "Data",
     bullets: [
-      "Live county parcel & zoning feeds",
-      "Overlay graph: environmental, utilities, code",
-      "90-day refresh across jurisdictions",
+      "Hundreds of live data feeds",
+      "Thousands of pages of code under index",
+      "The country's busiest entitlement jurisdictions",
     ],
   },
 ];
@@ -54,8 +52,8 @@ export default function Home() {
         <Problem />
         <Pillars />
         <HexStack
-          title="The stack under every parcel."
-          intro="Three layers that turn a raw address into a permit-ready project — data underneath, models in the middle, intelligence on top."
+          title="One stack, three layers."
+          intro="Data underneath, models in the middle, intelligence on top. Everything in the right column of every approval table runs on this."
           tiers={TIERS}
         />
         <EmailFeature />

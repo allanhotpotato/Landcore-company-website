@@ -23,7 +23,7 @@ export function Nav() {
         <nav className="nav-links">
           <a href="#problem">Problem</a>
           <a href="#answer">Product</a>
-          <a href="#how">How it works</a>
+          <a href="#how">The stack</a>
           <a href="#who">Who it&apos;s for</a>
           <a href="#results">Results</a>
         </nav>
@@ -46,25 +46,25 @@ export function Hero() {
       <div className="hero-grid">
         <div>
           <span className="tag tag-blue">
-            <Sparkle /> AI feasibility, in 48 hours
+            <Sparkle /> The operating system for entitlements
           </span>
           <h1>
-            Know it.
+            Decode it.
             <br />
-            Approve it.
+            Draft it.
             <br />
-            Build it.
+            Drive it.
           </h1>
           <p className="lead">
-            Landcore scores any site, decodes the zoning, and drives the permit — replacing 5–10
-            consultants with one system that tells you what to do, why, and by when.
+            Landcore is the system of record for getting a parcel through approval — one stack
+            that knows the code, drafts the documents, and tracks the cycle until you break ground.
           </p>
           <div className="hero-cta">
             <Button variant="primary" size="lg" icon="arrow-right" href="#demo">
-              Score your first site
+              Run a site through the stack
             </Button>
             <Button variant="secondary" size="lg" href="#how">
-              See how it works
+              See the stack
             </Button>
           </div>
           <div className="hero-stats">
@@ -72,17 +72,17 @@ export function Hero() {
               <div className="n">
                 48<span className="u">h</span>
               </div>
-              <div className="l">From parcel to feasibility score</div>
+              <div className="l">From parcel to a packet you can file</div>
             </div>
             <div className="stat">
               <div className="n">
                 $150K<span className="u">+</span>
               </div>
-              <div className="l">Saved per project</div>
+              <div className="l">Specialist spend avoided per project</div>
             </div>
             <div className="stat">
-              <div className="n">5–10</div>
-              <div className="l">Consultants replaced by one system</div>
+              <div className="n">1</div>
+              <div className="l">System for the whole cycle</div>
             </div>
           </div>
         </div>
@@ -143,27 +143,27 @@ export function Problem() {
   const cards = [
     {
       icon: "search-x",
-      t: "Feasibility is a guessing game",
-      d: "Five to ten consultants, six-figure spend, and months of waiting — just to learn whether a parcel pencils out.",
+      t: "Specialists, not a system",
+      d: "Feasibility, zoning, environmental, civil, legal — five to ten specialists, no shared layer of truth.",
     },
     {
       icon: "file-stack",
-      t: "Zoning lives in a thousand PDFs",
-      d: "Setbacks, overlays, and use tables buried across codes nobody reads the same way twice. Mistakes cost quarters.",
+      t: "Code that doesn't talk back",
+      d: "Setbacks, overlays, and use tables scattered across PDFs that don't search. One misread restarts the clock.",
     },
     {
       icon: "clock-alert",
-      t: "Permits stall in the dark",
-      d: "No owner, no timeline, no next step. Approvals slip and you find out when the calendar already has.",
+      t: "Permits with no owner",
+      d: "No timeline, no next step, no who-has-it. The cycle slips and the calendar tells you last.",
     },
   ];
   return (
     <section className="section bg-white" id="problem">
       <div className="container">
         <SectionHead
-          eyebrow="The problem"
-          title="The path to approval is fragmented and slow."
-          intro="Developers stitch together specialists, spreadsheets, and hope. It's expensive, manual, and impossible to predict."
+          eyebrow="Why this exists"
+          title="Approval is a relay race — and developers run every leg."
+          intro="Specialists, spreadsheets, code PDFs, portal logins, planner emails. Each handoff loses time. Each gap loses money."
         />
         <div className="grid-3" style={{ marginTop: 48 }}>
           {cards.map((c) => (
@@ -184,34 +184,34 @@ export function Problem() {
 export function Pillars() {
   const pillars = [
     {
-      k: "01 — Know it",
-      t: "Know it",
+      k: "01 — Decode it",
+      t: "Decode it",
       bullets: [
-        "Feasibility score across 4 layers",
-        "Zoning & overlay decoding",
-        "Environmental & utility flags",
-        "Entitlement & access risk",
+        "Every parcel pre-wired with its code",
+        "Zoning, overlays, environmental, utilities — unified",
+        "Feasibility scored across four layers",
+        "Entitlement path mapped to the decision",
       ],
-      advise: "file the variance before the Q3 zoning amendment — it saves a 90-day re-review.",
+      advise: "file the variance before the Q3 amendment — saves a 90-day re-review.",
     },
     {
-      k: "02 — Approve it",
-      t: "Approve it",
+      k: "02 — Draft it",
+      t: "Draft it",
       bullets: [
-        "AI-drafted submittals & emails",
-        "Municipal contacts mapped",
-        "One-click approve and send",
-        "Every thread tracked in one place",
+        "Submittals drafted from the cited code, not templates",
+        "Right desk, right document, right format",
+        "Approve, edit, or send in one click",
+        "Every revision stitched into one thread",
       ],
-      advise: "send the pre-application request now; the planner's calendar fills 3 weeks out.",
+      advise: "send the pre-application now; the planner's calendar fills three weeks out.",
     },
     {
-      k: "03 — Build it",
-      t: "Build it",
+      k: "03 — Drive it",
+      t: "Drive it",
       bullets: [
-        "Permit timeline with owners",
-        "Inspection briefs, auto-generated",
-        "Deadlines and dependencies",
+        "Cycle with owners, deadlines, dependencies",
+        "Inspection briefs grounded in the code",
+        "Re-inspection risk flagged before you call",
         "Status the whole team can see",
       ],
       advise: "schedule the footing inspection Thursday — concrete cures before the rain window.",
@@ -222,8 +222,8 @@ export function Pillars() {
       <div className="container">
         <SectionHead
           eyebrow="The Landcore answer"
-          title="One system. What to do, why, and by when."
-          intro="Not generic. Not manual. Landcore turns every parcel into a decision and every approval into a plan."
+          title="One stack. Decode, draft, drive."
+          intro="Not generic. Not manual. Landcore turns every parcel into a decision and every approval into a packet."
         />
         <div className="grid-3" style={{ marginTop: 48, alignItems: "stretch" }}>
           {pillars.map((p) => (
@@ -257,7 +257,7 @@ export function EmailFeature() {
       <div className="container">
         <div className="grid-2">
           <div>
-            <span className="eyebrow">AI email drafting</span>
+            <span className="eyebrow">Drafting layer</span>
             <h2
               style={{
                 margin: "16px 0 0",
@@ -268,16 +268,16 @@ export function EmailFeature() {
                 color: "var(--navy)",
               }}
             >
-              You approve. We send.
+              You approve. The stack files.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Landcore drafts every municipal email and submittal in your voice, attaches the right
-              documents, and routes it to the correct desk. Not generic. Not manual.
+              Landcore drafts every municipal document in your voice — grounded in the code,
+              attached to the right exhibits, routed to the desk that actually reads it.
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Drafts grounded in the actual application",
-                "Right contact, right attachments, every time",
+                "Drafts grounded in the cited code",
+                "Right desk, right format, every time",
                 "Approve, edit, or send in one click",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
@@ -309,7 +309,7 @@ export function InspectionFeature() {
             <InspectionCard />
           </div>
           <div style={{ order: 1 }}>
-            <span className="eyebrow">Inspection intelligence</span>
+            <span className="eyebrow">Cycle layer</span>
             <h2
               style={{
                 margin: "16px 0 0",
