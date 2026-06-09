@@ -56,15 +56,15 @@ export function Hero() {
             Build it.
           </h1>
           <p className="lead">
-            Landcore scores any site, decodes the zoning, and drives the permit — replacing 5–10
-            consultants with one system that tells you what to do, why, and by when.
+            Landcore turns a parcel into a permit-ready project — with the data already pulled,
+            the documents already drafted, and the cycle already running.
           </p>
           <div className="hero-cta">
             <Button variant="primary" size="lg" icon="arrow-right" href="#demo">
               Score your first site
             </Button>
             <Button variant="secondary" size="lg" href="#how">
-              See how it works
+              See the stack
             </Button>
           </div>
           <div className="hero-stats">
@@ -143,18 +143,18 @@ export function Problem() {
   const cards = [
     {
       icon: "search-x",
-      t: "Feasibility is a guessing game",
-      d: "Five to ten consultants, six-figure spend, and months of waiting — just to learn whether a parcel pencils out.",
+      t: "Feasibility lives in a six-figure black box",
+      d: "Five to ten specialists, months of waiting, just to learn whether a parcel pencils. The answer arrives expensive, late, and impossible to act on.",
     },
     {
       icon: "file-stack",
-      t: "Zoning lives in a thousand PDFs",
-      d: "Setbacks, overlays, and use tables buried across codes nobody reads the same way twice. Mistakes cost quarters.",
+      t: "Zoning is buried in a thousand PDFs",
+      d: "Setbacks, overlays, and use tables scattered across codes nobody reads the same way twice. One misread restarts the clock.",
     },
     {
       icon: "clock-alert",
       t: "Permits stall in the dark",
-      d: "No owner, no timeline, no next step. Approvals slip and you find out when the calendar already has.",
+      d: "No owner, no deadline, no next move. Approvals slip and the calendar tells you only after the fact.",
     },
   ];
   return (
@@ -187,10 +187,10 @@ export function Pillars() {
       k: "01 — Know it",
       t: "Know it",
       bullets: [
-        "Feasibility score across 4 layers",
-        "Zoning & overlay decoding",
-        "Environmental & utility flags",
-        "Entitlement & access risk",
+        "Feasibility scored across zoning, environment, access, and code",
+        "Overlays and setbacks decoded automatically",
+        "Environmental and utility risk surfaced up front",
+        "Entitlement path mapped before you tie up the land",
       ],
       advise: "file the variance before the Q3 zoning amendment — it saves a 90-day re-review.",
     },
@@ -198,21 +198,21 @@ export function Pillars() {
       k: "02 — Approve it",
       t: "Approve it",
       bullets: [
-        "AI-drafted submittals & emails",
-        "Municipal contacts mapped",
+        "Submittals drafted in your voice, grounded in the code",
+        "Right document, right desk, right format",
         "One-click approve and send",
-        "Every thread tracked in one place",
+        "Every revision stitched into one thread",
       ],
-      advise: "send the pre-application request now; the planner's calendar fills 3 weeks out.",
+      advise: "send the pre-application now; the planner's calendar fills three weeks out.",
     },
     {
       k: "03 — Build it",
       t: "Build it",
       bullets: [
-        "Permit timeline with owners",
-        "Inspection briefs, auto-generated",
-        "Deadlines and dependencies",
-        "Status the whole team can see",
+        "Permit cycle with owners, deadlines, and dependencies",
+        "Inspection briefs the inspector will actually read",
+        "Re-inspection risk flagged before you call",
+        "Status the whole team can see in one place",
       ],
       advise: "schedule the footing inspection Thursday — concrete cures before the rain window.",
     },
@@ -257,7 +257,7 @@ export function EmailFeature() {
       <div className="container">
         <div className="grid-2">
           <div>
-            <span className="eyebrow">AI email drafting</span>
+            <span className="eyebrow">AI submittal drafting</span>
             <h2
               style={{
                 margin: "16px 0 0",
@@ -268,16 +268,16 @@ export function EmailFeature() {
                 color: "var(--navy)",
               }}
             >
-              You approve. We send.
+              You approve. We file.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Landcore drafts every municipal email and submittal in your voice, attaches the right
-              documents, and routes it to the correct desk. Not generic. Not manual.
+              Landcore drafts every submittal in your voice, attaches the right files, and routes
+              it to the desk that actually reads it. Grounded in the code, not in templates.
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Drafts grounded in the actual application",
-                "Right contact, right attachments, every time",
+                "Drafts grounded in the cited code",
+                "Right desk, right format, every time",
                 "Approve, edit, or send in one click",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>

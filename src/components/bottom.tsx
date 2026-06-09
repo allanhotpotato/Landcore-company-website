@@ -22,7 +22,7 @@ export function WhoItsFor() {
         <SectionHead
           eyebrow="Who it's for"
           title="Built for every asset class you underwrite."
-          intro="One parcel or a hundred — Landcore scores the way each asset class actually gets approved."
+          intro="One parcel or a hundred — Landcore moves each asset class through approval the way it actually gets done."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {cols.map((c) => (
@@ -48,17 +48,17 @@ export function WhoItsFor() {
 
 export function Results() {
   const stats = [
-    { n: "48", u: "h", l: "Median time to a feasibility verdict" },
-    { n: "$150K", u: "+", l: "Average consultant spend avoided per project" },
+    { n: "48", u: "h", l: "From parcel to a permit-ready packet" },
+    { n: "$150K", u: "+", l: "Specialist spend avoided per project" },
     { n: "92", u: "%", l: "First-pass inspection rate with Landcore briefs" },
-    { n: "3.5", u: "×", l: "More sites screened by the same team" },
+    { n: "3.5", u: "×", l: "More sites the same team can move" },
   ];
   const rows = [
-    ["Time to feasibility", "6–12 weeks", "48 hours"],
-    ["People involved", "5–10 consultants", "One system"],
+    ["Time to permit-ready", "6–12 weeks", "48 hours"],
+    ["People involved", "5–10 specialists", "One stack"],
     ["Cost per site", "$150K+", "A fraction"],
     ["Zoning analysis", "Manual, PDF by PDF", "Decoded automatically"],
-    ["Permit visibility", "Email threads", "One live timeline"],
+    ["Cycle visibility", "Email threads", "One live timeline"],
     ["Next step", "Unclear", "What, why, and by when"],
   ];
   return (
@@ -132,7 +132,7 @@ export function CTA() {
               Score your next site this week.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--fg-on-blue-2)", maxWidth: 440 }}>
-              Bring a real parcel. We&apos;ll return a feasibility score in 48 hours and walk you
+              Bring a real parcel. In 48 hours we&apos;ll return a permit-ready packet and walk you
               through exactly what to do, why, and by when.
             </p>
             <div style={{ marginTop: 30, display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -161,9 +161,9 @@ export function Footer() {
       links: [
         ["Feasibility scoring", "#answer"],
         ["Zoning intelligence", "#answer"],
-        ["AI email drafting", "#answer"],
+        ["AI submittal drafting", "#answer"],
         ["Inspection briefs", "#how"],
-        ["Permit timeline", "#how"],
+        ["Permit cycle", "#how"],
       ],
     },
     {
