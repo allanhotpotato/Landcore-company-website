@@ -3,7 +3,6 @@
    Ported from sections.jsx.
    ============================================================ */
 import {
-  BlueprintBG,
   Button,
   EmailCard,
   FeasibilityCard,
@@ -244,39 +243,6 @@ export function Pillars() {
                 </b>{" "}
                 {p.advise}
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-export function HowItWorks() {
-  const steps = [
-    { n: "01", p: 100, t: "Drop a parcel", d: "Paste an address or APN. We pull the records, codes, and overlays automatically." },
-    { n: "02", p: 70, t: "Get the score", d: "A feasibility verdict in 48 hours — with the why behind every layer." },
-    { n: "03", p: 45, t: "Approve the plan", d: "Review AI-drafted submittals, approve, and we send them to the right desk." },
-    { n: "04", p: 25, t: "Track to permit", d: "Every deadline, owner, and inspection in one timeline until you break ground." },
-  ];
-  return (
-    <section className="section bg-navy blueprint-wrap" id="how">
-      <BlueprintBG />
-      <div className="container">
-        <SectionHead
-          eyebrow="How it works"
-          title="From raw parcel to permit in four steps."
-          intro="No kickoff calls. No consultant relay race. You drive; Landcore does the work."
-        />
-        <div className="steps" style={{ marginTop: 48 }}>
-          {steps.map((s) => (
-            <div className="step" key={s.n}>
-              <div className="num">{s.n}</div>
-              <div className="bar">
-                <i style={{ width: s.p + "%" }}></i>
-              </div>
-              <h4>{s.t}</h4>
-              <p>{s.d}</p>
             </div>
           ))}
         </div>

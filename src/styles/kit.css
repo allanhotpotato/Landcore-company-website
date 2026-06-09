@@ -239,6 +239,20 @@ img { display: block; max-width: 100%; }
   .marquee-track { animation: none; }
 }
 
+/* ---------- HexStack — Intelligence / Models / Data architecture visual ---------- */
+.hex-section .sec-head h2 { color: #fff; }
+.hex-wrap { margin: 56px auto 0; max-width: 880px; }
+.hex-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.hex-outline { fill: none; stroke: rgba(255, 255, 255, 0.22); stroke-width: 1.4; }
+.hex-connector { stroke: rgba(255, 255, 255, 0.30); stroke-width: 1.2; }
+.hex-connector-dot { fill: rgba(255, 255, 255, 0.60); }
+.hex-circle { fill: none; stroke: rgba(255, 255, 255, 0.26); stroke-width: 1; stroke-dasharray: 3 4; }
+.hex-label { font-family: var(--font-sans); color: #fff; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; }
+.hex-label-text { font-size: 26px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; display: flex; align-items: center; gap: 8px; }
+.hex-label-spark { color: var(--blue); font-size: 18px; }
+.hex-label-stat { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.04em; color: var(--fg-on-navy-2); text-transform: uppercase; }
+.hex-bullet { font-family: var(--font-sans); color: #fff; font-size: 14px; line-height: 1.32; font-weight: 500; letter-spacing: -0.005em; text-align: center; height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; padding: 6px; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .hero-grid, .grid-2, .cta-grid { grid-template-columns: 1fr; gap: 40px; }
