@@ -49,15 +49,16 @@ export function Hero() {
             <Sparkle /> Live data on the country&apos;s busiest jurisdictions
           </span>
           <h1>
-            Parcel.
+            Feasible.
             <br />
-            Permit.
+            Entitled.
             <br />
-            Done.
+            Permitted.
           </h1>
           <p className="lead">
             Every parcel arrives pre-wired with its zoning, overlays, utilities, and the code that
-            governs them. Then Landcore drafts the documents and runs the cycle.
+            govern them. Then Landcore runs the entitlement cycle — variance to permit — and
+            drafts what each desk needs.
           </p>
           <div className="hero-cta">
             <Button variant="primary" size="lg" icon="arrow-right" href="#demo">
@@ -184,37 +185,37 @@ export function Problem() {
 export function Pillars() {
   const pillars = [
     {
-      k: "01 — Parcel",
-      t: "Parcel",
+      k: "01 — Site feasibility",
+      t: "Site feasibility",
       bullets: [
-        "Assessor records: owner, address, acreage",
-        "Boundary geometry, pre-computed",
-        "Land use, current zoning, lot history",
-        "One schema, across every jurisdiction",
+        "Parcel data: assessor, geometry, land use",
+        "Zoning lookup: districts, setbacks, FAR, overlays",
+        "Environmental & utility flags surfaced up front",
+        "Go / no-go score across the four layers",
       ],
       advise: "this parcel sits in a flood overlay — the buyer should re-price.",
     },
     {
-      k: "02 — Zoning",
-      t: "Zoning",
+      k: "02 — Entitlements",
+      t: "Entitlements",
       bullets: [
-        "Live zoning districts, decoded",
-        "Setbacks, FAR, height, parking",
-        "Overlays: environmental, water, soil",
-        "Variance grounds, mapped to code",
+        "Discretionary path mapped per jurisdiction",
+        "Variance, CUP, and rezoning packets drafted",
+        "Planning commission & council materials prepared",
+        "Staff and neighborhood objections preempted",
       ],
-      advise: "file the variance before the Q3 zoning amendment — saves a 90-day re-review.",
+      advise: "file the variance before the Q3 amendment — saves a 90-day re-review.",
     },
     {
-      k: "03 — Permit",
-      t: "Permit",
+      k: "03 — Permits",
+      t: "Permits",
       bullets: [
-        "Cited submittals, drafted automatically",
-        "Owners, deadlines, dependencies",
+        "Building, grading, and ESC permits sequenced",
         "Inspection briefs grounded in code",
-        "Status across the whole cycle",
+        "Owners and deadlines across the cycle",
+        "Status the whole team can see",
       ],
-      advise: "send the pre-application now; the planner's calendar fills three weeks out.",
+      advise: "schedule the footing inspection Thursday — concrete cures before the rain window.",
     },
   ];
   return (
@@ -222,8 +223,8 @@ export function Pillars() {
       <div className="container">
         <SectionHead
           eyebrow="The Landcore answer"
-          title="Three layers, already pulled."
-          intro="Parcel underneath. Zoning on top of it. Permit on top of that. Every layer indexed, decoded, and ready before you start."
+          title="Feasibility, entitlements, permits — one stack."
+          intro="Three phases of pre-construction, on one stack. Every layer indexed, decoded, and ready before you start."
         />
         <div className="grid-3" style={{ marginTop: 48, alignItems: "stretch" }}>
           {pillars.map((p) => (
@@ -271,8 +272,9 @@ export function EmailFeature() {
               Cited drafts, not templates.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Landcore reads the actual code, drafts the actual submittal, and attaches the actual
-              exhibits. Then routes it to the desk that reads it.
+              Landcore reads the actual code and drafts what the approval needs — variance packets,
+              conditional use applications, permit submittals — with exhibits attached. Then routes
+              them to the desk that reads them.
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[

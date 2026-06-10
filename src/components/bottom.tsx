@@ -22,7 +22,7 @@ export function WhoItsFor() {
         <SectionHead
           eyebrow="Who it's for"
           title="Live data for every asset class you underwrite."
-          intro="Multifamily to megawatts: the layers behind each approval differ, and so does the data Landcore pulls."
+          intro="Live data, plus the entitlement path, for every asset class you underwrite. Multifamily to megawatts — the layers behind each approval differ, and so does the data Landcore pulls."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {cols.map((c) => (
@@ -133,7 +133,7 @@ export function CTA() {
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--fg-on-blue-2)", maxWidth: 440 }}>
               Bring a real parcel. We&apos;ll show you what the data layer pulls in 60 seconds — and
-              the permit cycle Landcore would run.
+              the entitlement path Landcore would run, from variance through permit.
             </p>
             <div style={{ marginTop: 30, display: "flex", gap: 12, flexWrap: "wrap" }}>
               <CalendlyButton variant="onblue" size="lg" icon="calendar-check">
@@ -161,8 +161,8 @@ export function Footer() {
       links: [
         ["The data layer", "#how"],
         ["Zoning decoding", "#answer"],
-        ["Submittal drafting", "#answer"],
-        ["Cycle visibility", "#answer"],
+        ["Entitlement drafting", "#answer"],
+        ["Permit cycle", "#answer"],
         ["Inspection briefs", "#answer"],
       ],
     },
@@ -193,7 +193,7 @@ export function Footer() {
             <Logo dark />
             <p className="tagline">
               Live data on the country&apos;s busiest jurisdictions, plus the models and
-              intelligence to turn it into a permit-ready project. Parcel, permit, done.
+              intelligence to take a parcel from feasible to entitled to permitted.
             </p>
           </div>
           {cols.map((c) => (

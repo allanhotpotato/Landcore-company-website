@@ -15,9 +15,9 @@ const TIERS: [HexTier, HexTier, HexTier] = [
   {
     label: "Intelligence",
     sparkle: true,
-    microStat: "End-to-end permit cycle",
+    microStat: "End-to-end entitlement cycle",
     bullets: [
-      "Cycle decisioning per parcel",
+      "Discretionary approval pathing",
       "Agentic municipal drafting",
       "Owner, deadline, next move",
     ],
@@ -28,7 +28,7 @@ const TIERS: [HexTier, HexTier, HexTier] = [
     bullets: [
       "Code-grounded submittal generation",
       "Risk × jurisdiction routing",
-      "Inspection readiness scoring",
+      "Approval readiness scoring",
     ],
   },
   {
