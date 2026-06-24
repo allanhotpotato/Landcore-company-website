@@ -5,10 +5,10 @@
 import {
   BlueprintBG,
   Button,
+  DashboardCard,
   EmailCard,
   FeasibilityCard,
   Icon,
-  InspectionCard,
   Logo,
   SectionHead,
   Sparkle,
@@ -57,8 +57,8 @@ export function Hero() {
             Build it.
           </h1>
           <p className="lead">
-            Landcore scores any site, decodes the zoning, and drives the permit — replacing 5–10
-            consultants with one system that tells you what to do, why, and by when.
+            Landcore scores any site, decodes the zoning, and drives the entitlements — with a
+            licensed expert reviewing the AI, and your whole team on one dashboard.
           </p>
           <div className="hero-cta">
             <Button variant="primary" size="lg" icon="arrow-right" href="#demo">
@@ -178,8 +178,8 @@ export function Problem() {
     },
     {
       icon: "clock-alert",
-      t: "Permits stall in the dark",
-      d: "No owner, no timeline, no next step. Approvals slip and you find out when the calendar already has.",
+      t: "Entitlements stall in the dark",
+      d: "Rezonings, variances, and approvals scatter across emails and consultants — no owner, no timeline, no next step.",
     },
   ];
   return (
@@ -223,10 +223,10 @@ export function Pillars() {
       k: "02 — Approve it",
       t: "Approve it",
       bullets: [
-        "AI-drafted submittals & emails",
-        "Municipal contacts mapped",
+        "AI-drafted entitlement submittals",
+        "Planning-dept contacts mapped",
+        "Licensed expert reviews every draft",
         "One-click approve and send",
-        "Every thread tracked in one place",
       ],
       advise: "send the pre-application request now; the planner's calendar fills 3 weeks out.",
     },
@@ -234,12 +234,12 @@ export function Pillars() {
       k: "03 — Build it",
       t: "Build it",
       bullets: [
-        "Permit timeline with owners",
-        "Inspection briefs, auto-generated",
-        "Deadlines and dependencies",
-        "Status the whole team can see",
+        "One live dashboard for the project",
+        "Developers, consultants & counsel in sync",
+        "Every approval, owner & deadline visible",
+        "Next step — what, why, and by when",
       ],
-      advise: "schedule the footing inspection Thursday — concrete cures before the rain window.",
+      advise: "loop the civil engineer in on the traffic study — it gates the rezoning hearing.",
     },
   ];
   return (
@@ -302,8 +302,8 @@ export function HowItWorks() {
       cy: 185,
       nodes: [
         { x: -140, y: -32, lead: true, lines: ["48-hour", "feasibility verdict"] },
-        { x: 142, y: -32, lines: ["Federal · state · local", "permit checklist"] },
-        { x: 2, y: 44, lines: ["Citation per row,", "honest abstention"] },
+        { x: 142, y: -32, lines: ["Entitlement &", "approval checklist"] },
+        { x: 2, y: 44, lines: ["Licensed-expert review,", "citation per row"] },
       ],
     },
     {
@@ -332,8 +332,8 @@ export function HowItWorks() {
       <div className="container">
         <SectionHead
           eyebrow="How it works"
-          title="One stack — from proprietary data to a signed-off permit."
-          intro="Three layers working as one system: the parcel data we own, the engines that reason over it, and the grounded intelligence you act on."
+          title="One stack — from raw parcel to entitlement approval."
+          intro="Three layers working as one system: the parcel data we own, the engines that reason over it, and the grounded intelligence a licensed expert signs off before you act."
         />
         <div style={{ marginTop: 40, display: "flex", justifyContent: "center" }}>
           <svg
@@ -426,7 +426,7 @@ export function EmailFeature() {
       <div className="container">
         <div className="grid-2">
           <div>
-            <span className="eyebrow">AI email drafting</span>
+            <span className="eyebrow">Entitlement submittals · human-in-the-loop</span>
             <h2
               style={{
                 margin: "16px 0 0",
@@ -437,20 +437,22 @@ export function EmailFeature() {
                 color: "var(--navy)",
               }}
             >
-              You approve. We send.
+              AI drafts it. A licensed expert reviews it. You approve.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Landcore drafts every municipal email and submittal in your voice, attaches the right
-              documents, and routes it to the correct desk. Not generic. Not manual.
+              Landcore drafts your entitlement applications — variances, rezonings, use permits, and
+              planning-dept emails — grounded in the actual code. A licensed land-use professional
+              reviews every one before it reaches you. Never auto-filed, never fabricated.
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Drafts grounded in the actual application",
-                "Right contact, right attachments, every time",
-                "Approve, edit, or send in one click",
+                "Focused on entitlements — not a black box for every permit",
+                "Reviewed and signed off by a licensed expert",
+                "Cited to the code, or it honestly flags for manual review",
+                "You approve, edit, or send in one click",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
-                  <Icon name="check" size={18} color="var(--blue)" /> {t}
+                  <Icon name="badge-check" size={18} color="var(--blue)" /> {t}
                 </li>
               ))}
             </ul>
@@ -469,16 +471,16 @@ export function EmailFeature() {
   );
 }
 
-export function InspectionFeature() {
+export function SyncDashboard() {
   return (
-    <section className="section bg-off">
+    <section className="section bg-off" id="dashboard">
       <div className="container">
         <div className="grid-2">
           <div style={{ order: 2 }}>
-            <InspectionCard />
+            <DashboardCard />
           </div>
           <div style={{ order: 1 }}>
-            <span className="eyebrow">Inspection intelligence</span>
+            <span className="eyebrow">One project dashboard</span>
             <h2
               style={{
                 margin: "16px 0 0",
@@ -489,26 +491,28 @@ export function InspectionFeature() {
                 color: "var(--navy)",
               }}
             >
-              Walk in ready. Pass the first time.
+              Your whole project, on one source of truth.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Before every inspection, Landcore generates a brief of exactly what the inspector will
-              check — with the code citation and the spec — so nothing gets red-tagged.
+              Developers, civil engineers, architects, and land-use counsel work off the same live
+              dashboard — every entitlement, owner, deadline, and next step in one place. No relay
+              races, no version sprawl, no "who has the latest?"
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Checklist tailored to the inspection type",
-                "Code citations and required tolerances",
-                "Re-inspection risk flagged before you call",
+                "Every stakeholder on one shared view",
+                "Live status on each approval and study",
+                "Clear owner and due date on every item",
+                "What's next — and what's blocking it",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
-                  <Icon name="check" size={18} color="var(--blue)" /> {t}
+                  <Icon name="layout-dashboard" size={18} color="var(--blue)" /> {t}
                 </li>
               ))}
             </ul>
             <div style={{ marginTop: 30 }}>
               <Button variant="primary" icon="arrow-right" href="#demo">
-                Generate a brief
+                See the dashboard
               </Button>
             </div>
           </div>

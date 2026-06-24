@@ -3,11 +3,11 @@ import {
   EmailFeature,
   Hero,
   HowItWorks,
-  InspectionFeature,
   Nav,
   Pillars,
   Problem,
   SocialProof,
+  SyncDashboard,
 } from "@/components/sections";
 import { CTA, Footer, Results, WhoItsFor } from "@/components/bottom";
 
@@ -25,7 +25,7 @@ export default function Home() {
         <Pillars />
         <HowItWorks />
         <EmailFeature />
-        <InspectionFeature />
+        <SyncDashboard />
         <WhoItsFor />
         <Results />
         <CTA />

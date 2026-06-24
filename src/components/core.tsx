@@ -18,10 +18,12 @@ import {
   Grid2x2,
   HardHat,
   Hash,
+  BadgeCheck,
   Home,
   Hotel,
   LandPlot,
   Landmark,
+  LayoutDashboard,
   Mail,
   Map,
   MapPinned,
@@ -29,6 +31,7 @@ import {
   SearchX,
   Signature,
   Store,
+  Users,
   Warehouse,
   type LucideIcon,
 } from "lucide-react";
@@ -37,6 +40,7 @@ import {
 // components, so icons render server-side (no client pop-in) and tree-shake.
 const ICONS: Record<string, LucideIcon> = {
   "arrow-right": ArrowRight,
+  "badge-check": BadgeCheck,
   box: Box,
   "building-2": Building2,
   "calendar-check": CalendarCheck,
@@ -54,6 +58,7 @@ const ICONS: Record<string, LucideIcon> = {
   hotel: Hotel,
   "land-plot": LandPlot,
   landmark: Landmark,
+  "layout-dashboard": LayoutDashboard,
   mail: Mail,
   map: Map,
   "map-pinned": MapPinned,
@@ -61,6 +66,7 @@ const ICONS: Record<string, LucideIcon> = {
   "search-x": SearchX,
   signature: Signature,
   store: Store,
+  users: Users,
   warehouse: Warehouse,
 };
 
@@ -324,6 +330,108 @@ export function InspectionCard() {
               <span>
                 <div className="ct">{it.t}</div>
                 <div className="cs">{it.s}</div>
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ---------- PRODUCT MOCKUP 4: Project Sync Dashboard ---------- */
+export function DashboardCard() {
+  // Stakeholders on the project, all looking at the same live status.
+  const people = [
+    { i: "DV", c: "#2563EB" },
+    { i: "CE", c: "#0E9F8E" },
+    { i: "LC", c: "#7C3AED" },
+    { i: "AR", c: "#D97706" },
+  ];
+  const tone: Record<string, { bg: string; fg: string }> = {
+    ok: { bg: "var(--ok-bg)", fg: "var(--ok)" },
+    warn: { bg: "var(--warn-bg)", fg: "var(--warn)" },
+    info: { bg: "var(--info-bg)", fg: "var(--info)" },
+    muted: { bg: "var(--gray-100)", fg: "var(--gray-500)" },
+  };
+  const rows: { t: string; owner: string; status: string; tone: string }[] = [
+    { t: "Rezoning application", owner: "Land-use counsel", status: "In review", tone: "warn" },
+    { t: "Traffic impact study", owner: "Civil engineer", status: "Approved", tone: "ok" },
+    { t: "Variance request", owner: "Landcore AI · expert-reviewed", status: "Drafting", tone: "info" },
+    { t: "Site-plan submittal", owner: "Architect", status: "Queued", tone: "muted" },
+  ];
+  return (
+    <div className="mock">
+      <div className="mock-bar">
+        <span className="dots">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+        <span className="t">landcore.ai/project</span>
+      </div>
+      <div className="mock-banner banner-info">
+        <Icon name="users" size={15} /> Whole team in sync · updated just now
+      </div>
+      <div className="mock-body">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+          <div>
+            <div className="addr">2240 Harbor Blvd</div>
+            <div className="apn">Entitlement track · 4 of 9 approvals cleared</div>
+          </div>
+          <div style={{ display: "flex" }}>
+            {people.map((p, idx) => (
+              <span
+                key={p.i}
+                style={{
+                  width: 26,
+                  height: 26,
+                  borderRadius: "50%",
+                  background: p.c,
+                  color: "#fff",
+                  fontSize: 10.5,
+                  fontWeight: 700,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  border: "2px solid #fff",
+                  marginLeft: idx ? -8 : 0,
+                }}
+              >
+                {p.i}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div style={{ display: "grid", gap: 9 }}>
+          {rows.map((r) => (
+            <div
+              key={r.t}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "10px 12px",
+                border: "1px solid var(--gray-200)",
+                borderRadius: 10,
+              }}
+            >
+              <div>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: "var(--navy)" }}>{r.t}</div>
+                <div style={{ fontSize: 12, color: "var(--gray-500)", marginTop: 2 }}>{r.owner}</div>
+              </div>
+              <span
+                style={{
+                  fontSize: 11.5,
+                  fontWeight: 600,
+                  padding: "4px 10px",
+                  borderRadius: 999,
+                  background: tone[r.tone].bg,
+                  color: tone[r.tone].fg,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {r.status}
               </span>
             </div>
           ))}

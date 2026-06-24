@@ -50,7 +50,7 @@ export function Results() {
   const stats = [
     { n: "48", u: "h", l: "Median time to a feasibility verdict" },
     { n: "$150K", u: "+", l: "Average consultant spend avoided per project" },
-    { n: "92", u: "%", l: "First-pass inspection rate with Landcore briefs" },
+    { n: "100", u: "%", l: "Submittals reviewed by a licensed expert" },
     { n: "3.5", u: "×", l: "More sites screened by the same team" },
   ];
   const rows = [
@@ -58,7 +58,8 @@ export function Results() {
     ["People involved", "5–10 consultants", "One system"],
     ["Cost per site", "$150K+", "A fraction"],
     ["Zoning analysis", "Manual, PDF by PDF", "Decoded automatically"],
-    ["Permit visibility", "Email threads", "One live timeline"],
+    ["Entitlement oversight", "Hope it's right", "Licensed expert signs off"],
+    ["Project visibility", "Email threads", "One shared dashboard"],
     ["Next step", "Unclear", "What, why, and by when"],
   ];
   return (
@@ -161,9 +162,9 @@ export function Footer() {
       links: [
         ["Feasibility scoring", "#answer"],
         ["Zoning intelligence", "#answer"],
-        ["AI email drafting", "#answer"],
-        ["Inspection briefs", "#how"],
-        ["Permit timeline", "#how"],
+        ["Entitlement submittals", "#answer"],
+        ["Human-in-the-loop review", "#how"],
+        ["Project dashboard", "#dashboard"],
       ],
     },
     {
@@ -192,8 +193,8 @@ export function Footer() {
           <div>
             <Logo dark />
             <p className="tagline">
-              AI-powered site feasibility, zoning intelligence, and permit management for real
-              estate developers. Know it. Approve it. Build it.
+              AI-powered site feasibility, zoning intelligence, and entitlement management — with a
+              licensed expert in the loop — for real estate developers. Know it. Approve it. Build it.
             </p>
           </div>
           {cols.map((c) => (
