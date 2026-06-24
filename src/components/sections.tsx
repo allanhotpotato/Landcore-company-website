@@ -332,7 +332,7 @@ export function HowItWorks() {
       <div className="container">
         <SectionHead
           eyebrow="How it works"
-          title="One stack — from raw parcel to entitlement approval."
+          title="One stack, from raw parcel to entitlement approval."
           intro="Three layers working as one system: the parcel data we own, the engines that reason over it, and the grounded intelligence a licensed expert signs off before you act."
         />
         <div style={{ marginTop: 40, display: "flex", justifyContent: "center" }}>
@@ -344,7 +344,7 @@ export function HowItWorks() {
           >
             <defs>
               <filter id="hex-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="0" stdDeviation="3.5" floodColor="#4D77F5" floodOpacity="0.55" />
+                <feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#6E94FF" floodOpacity="0.8" />
               </filter>
             </defs>
             {layers.map((layer) => (
@@ -352,9 +352,9 @@ export function HowItWorks() {
                 {/* hexagon outline — glowing blue edge so the boundary pops */}
                 <polygon
                   points={hexPoints(CX, layer.cy)}
-                  fill="rgba(77,119,245,0.04)"
-                  stroke="#7E9BF2"
-                  strokeWidth={2.2}
+                  fill="rgba(77,119,245,0.05)"
+                  stroke="#B6CBFF"
+                  strokeWidth={2.6}
                   strokeLinejoin="round"
                   filter="url(#hex-glow)"
                 />
@@ -391,16 +391,16 @@ export function HowItWorks() {
                         cx={ncx}
                         cy={ncy}
                         r={64}
-                        fill={n.lead ? "rgba(91,134,245,0.14)" : "none"}
-                        stroke={n.lead ? "rgba(140,165,250,0.7)" : "rgba(255,255,255,0.28)"}
+                        fill="rgba(91,134,245,0.18)"
+                        stroke="rgba(160,185,255,0.9)"
                         strokeWidth={1}
                         strokeDasharray="3 4"
                       />
                       <text
                         textAnchor="middle"
-                        fontSize={n.lead ? 13.5 : 12.5}
-                        fontWeight={n.lead ? 600 : 400}
-                        fill={n.lead ? "#FFFFFF" : "#AEB7D1"}
+                        fontSize={13.5}
+                        fontWeight={600}
+                        fill="#FFFFFF"
                       >
                         {n.lines.map((ln, j) => (
                           <tspan key={j} x={ncx} y={startY + j * lh}>
