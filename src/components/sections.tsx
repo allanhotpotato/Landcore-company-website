@@ -96,20 +96,15 @@ export function Hero() {
 }
 
 export function SocialProof() {
-  // Real construction / RE software stack Landcore works alongside.
-  const logos: [string, string][] = [
-    ["hard-hat", "Procore"],
-    ["file-pen", "Bluebeam"],
-    ["ruler", "Autodesk Construction"],
-    ["signature", "DocuSign"],
-    ["map-pinned", "Esri ArcGIS"],
-    ["mail", "Google Workspace"],
-    ["hash", "Slack"],
-    ["grid-2x2", "Microsoft 365"],
-    ["box", "Dropbox"],
-    ["land-plot", "Regrid"],
+  // Investors backing Landcore. Logos are background-removed, recolored for the
+  // light section, and sharpened (see /public/assets/logo-*.png). Cory Levy is an
+  // individual angel (no firm logo), so he renders as a typographic wordmark.
+  const backers: { name: string; logo?: string; h?: number; boxed?: boolean }[] = [
+    { name: "Susa Ventures", logo: "/assets/logo-susa.png", h: 48 },
+    { name: "Browder Capital", logo: "/assets/logo-browder.png", h: 44, boxed: true },
+    { name: "Z Fellows", logo: "/assets/logo-zfellows.png", h: 26 },
+    { name: "Cory Levy" },
   ];
-  const track = [...logos, ...logos];
   return (
     <section className="section-tight bg-off">
       <div className="container">
@@ -121,19 +116,48 @@ export function SocialProof() {
             textTransform: "uppercase",
             color: "var(--gray-400)",
             fontWeight: 600,
-            margin: "0 0 28px",
+            margin: "0 0 30px",
           }}
         >
-          Works alongside your stack
+          Backed by
         </p>
-        <div className="marquee">
-          <div className="marquee-track">
-            {track.map((l, i) => (
-              <span className="marquee-item" key={i}>
-                <Icon name={l[0]} size={20} /> {l[1]}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "clamp(30px, 6vw, 76px)",
+          }}
+        >
+          {backers.map((b) =>
+            b.logo ? (
+              <img
+                key={b.name}
+                src={b.logo}
+                alt={b.name}
+                style={{
+                  height: b.h,
+                  width: "auto",
+                  objectFit: "contain",
+                  borderRadius: b.boxed ? 8 : 0,
+                }}
+              />
+            ) : (
+              <span
+                key={b.name}
+                style={{
+                  fontSize: 30,
+                  fontWeight: 600,
+                  letterSpacing: "-0.02em",
+                  color: "var(--navy)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {b.name}
               </span>
-            ))}
-          </div>
+            )
+          )}
         </div>
       </div>
     </section>
@@ -253,32 +277,143 @@ export function Pillars() {
 }
 
 export function HowItWorks() {
-  const steps = [
-    { n: "01", p: 100, t: "Drop a parcel", d: "Paste an address or APN. We pull the records, codes, and overlays automatically." },
-    { n: "02", p: 70, t: "Get the score", d: "A feasibility verdict in 48 hours — with the why behind every layer." },
-    { n: "03", p: 45, t: "Approve the plan", d: "Review AI-drafted submittals, approve, and we send them to the right desk." },
-    { n: "04", p: 25, t: "Track to permit", d: "Every deadline, owner, and inspection in one timeline until you break ground." },
+  // Landcore's real architecture, drawn as a three-layer blueprint stack.
+  // Grounded in the Codex parcel engine + the Permit-Workflow engine
+  // (Federal baseline → State overlay → Local module).
+  const R = 150; // vertical half-height (center → top/bottom vertex)
+  const CX = 520; // shared horizontal center of the stack (== viewBox midpoint)
+  const HW = 235; // horizontal half-width — stretched wider than a regular hex
+  const hexPoints = (cx: number, cy: number) =>
+    [
+      [cx, cy - R],
+      [cx + HW, cy - R / 2],
+      [cx + HW, cy + R / 2],
+      [cx, cy + R],
+      [cx - HW, cy + R / 2],
+      [cx - HW, cy - R / 2],
+    ]
+      .map((p) => p.join(","))
+      .join(" ");
+
+  type Node = { x: number; y: number; lines: string[]; lead?: boolean };
+  const layers: { label: string; cy: number; nodes: Node[] }[] = [
+    {
+      label: "Intelligence",
+      cy: 185,
+      nodes: [
+        { x: -140, y: -32, lead: true, lines: ["48-hour", "feasibility verdict"] },
+        { x: 142, y: -32, lines: ["Federal · state · local", "permit checklist"] },
+        { x: 2, y: 44, lines: ["Citation per row,", "honest abstention"] },
+      ],
+    },
+    {
+      label: "Engines",
+      cy: 425,
+      nodes: [
+        { x: -140, y: -32, lead: true, lines: ["Deterministic", "rule decision tree"] },
+        { x: 142, y: -32, lines: ["Weighted parcel", "scoring engine"] },
+        { x: 2, y: 44, lines: ["LLM grounding", "+ abstention gate"] },
+      ],
+    },
+    {
+      label: "Data",
+      cy: 665,
+      nodes: [
+        { x: -140, y: -32, lead: true, lines: ["US parcel master", "+ GIS layers"] },
+        { x: 142, y: -32, lines: ["Power · water · geo", "· zoning signals"] },
+        { x: 2, y: 44, lines: ["Regulatory corpus", "federal / state / local"] },
+      ],
+    },
   ];
+
   return (
     <section className="section bg-navy blueprint-wrap" id="how">
       <BlueprintBG />
       <div className="container">
         <SectionHead
           eyebrow="How it works"
-          title="From raw parcel to permit in four steps."
-          intro="No kickoff calls. No consultant relay race. You drive; Landcore does the work."
+          title="One stack — from proprietary data to a signed-off permit."
+          intro="Three layers working as one system: the parcel data we own, the engines that reason over it, and the grounded intelligence you act on."
         />
-        <div className="steps" style={{ marginTop: 48 }}>
-          {steps.map((s) => (
-            <div className="step" key={s.n}>
-              <div className="num">{s.n}</div>
-              <div className="bar">
-                <i style={{ width: s.p + "%" }}></i>
-              </div>
-              <h4>{s.t}</h4>
-              <p>{s.d}</p>
-            </div>
-          ))}
+        <div style={{ marginTop: 40, display: "flex", justifyContent: "center" }}>
+          <svg
+            viewBox="0 0 1040 850"
+            role="img"
+            aria-label="Landcore architecture: a three-layer stack — Data at the base, Engines in the middle, and Intelligence on top."
+            style={{ width: "100%", maxWidth: 980, height: "auto" }}
+          >
+            <defs>
+              <filter id="hex-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="0" stdDeviation="3.5" floodColor="#4D77F5" floodOpacity="0.55" />
+              </filter>
+            </defs>
+            {layers.map((layer) => (
+              <g key={layer.label}>
+                {/* hexagon outline — glowing blue edge so the boundary pops */}
+                <polygon
+                  points={hexPoints(CX, layer.cy)}
+                  fill="rgba(77,119,245,0.04)"
+                  stroke="#7E9BF2"
+                  strokeWidth={2.2}
+                  strokeLinejoin="round"
+                  filter="url(#hex-glow)"
+                />
+                {/* left layer label + connector */}
+                <text
+                  x={CX - HW - 36}
+                  y={layer.cy + 6}
+                  textAnchor="end"
+                  fill="#FFFFFF"
+                  fontSize={21}
+                  fontWeight={600}
+                  letterSpacing="-0.01em"
+                >
+                  {layer.label}
+                </text>
+                <line
+                  x1={CX - HW - 28}
+                  y1={layer.cy}
+                  x2={CX - HW - 2}
+                  y2={layer.cy}
+                  stroke="rgba(255,255,255,0.45)"
+                  strokeWidth={1}
+                />
+                <circle cx={CX - HW} cy={layer.cy} r={3.2} fill="#5B86F5" />
+                {/* nodes */}
+                {layer.nodes.map((n, i) => {
+                  const ncx = CX + n.x;
+                  const ncy = layer.cy + n.y;
+                  const lh = 15;
+                  const startY = ncy - ((n.lines.length - 1) * lh) / 2 + 4;
+                  return (
+                    <g key={i}>
+                      <circle
+                        cx={ncx}
+                        cy={ncy}
+                        r={64}
+                        fill={n.lead ? "rgba(91,134,245,0.14)" : "none"}
+                        stroke={n.lead ? "rgba(140,165,250,0.7)" : "rgba(255,255,255,0.28)"}
+                        strokeWidth={1}
+                        strokeDasharray="3 4"
+                      />
+                      <text
+                        textAnchor="middle"
+                        fontSize={n.lead ? 13.5 : 12.5}
+                        fontWeight={n.lead ? 600 : 400}
+                        fill={n.lead ? "#FFFFFF" : "#AEB7D1"}
+                      >
+                        {n.lines.map((ln, j) => (
+                          <tspan key={j} x={ncx} y={startY + j * lh}>
+                            {ln}
+                          </tspan>
+                        ))}
+                      </text>
+                    </g>
+                  );
+                })}
+              </g>
+            ))}
+          </svg>
         </div>
       </div>
     </section>
