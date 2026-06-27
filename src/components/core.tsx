@@ -440,3 +440,114 @@ export function DashboardCard() {
     </div>
   );
 }
+
+/* ---------- PRODUCT MOCKUP 5: Entitlement Risk Scoreboard ---------- */
+export function ScoreboardCard() {
+  // Public-record outcomes turned into a jurisdiction risk read.
+  const stats = [
+    { n: "14.5", u: " mo", l: "Median time to approval" },
+    { n: "62", u: "%", l: "Approved as filed" },
+  ];
+  const decisions: { t: string; o: string; meta: string; tone: "ok" | "warn" }[] = [
+    { t: "Mixed-use · 120 units", o: "Approved", meta: "11 mo", tone: "ok" },
+    { t: "Multifamily · 84 units", o: "Approved", meta: "16 mo", tone: "ok" },
+    { t: "Multifamily · 200 units", o: "Denied", meta: "CEQA appeal", tone: "warn" },
+  ];
+  const chipTone = (tone: "ok" | "warn") =>
+    tone === "ok"
+      ? { bg: "var(--ok-bg)", fg: "var(--ok)" }
+      : { bg: "var(--warn-bg)", fg: "var(--warn)" };
+  return (
+    <div className="mock">
+      <div className="mock-bar">
+        <span className="dots">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+        <span className="t">landcore.ai/scoreboard</span>
+      </div>
+      <div className="mock-banner banner-info">
+        <Icon name="map-pinned" size={15} /> Entitlement risk · City of Carlsbad, CA
+      </div>
+      <div className="mock-body">
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <div>
+            <div className="addr">Multifamily · 50–200 units</div>
+            <div className="apn">Built from 240 public filings · updated monthly</div>
+          </div>
+          <span
+            style={{
+              fontSize: 11.5,
+              fontWeight: 700,
+              padding: "4px 10px",
+              borderRadius: 999,
+              background: "var(--warn-bg)",
+              color: "var(--warn)",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Moderate risk
+          </span>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, margin: "16px 0" }}>
+          {stats.map((s) => (
+            <div key={s.l} style={{ border: "1px solid var(--gray-200)", borderRadius: 12, padding: "13px 14px" }}>
+              <div style={{ fontSize: 28, fontWeight: 700, color: "var(--navy)", letterSpacing: "-0.02em", lineHeight: 1 }}>
+                {s.n}
+                <span style={{ fontSize: 14, fontWeight: 600, color: "var(--gray-400)" }}>{s.u}</span>
+              </div>
+              <div style={{ fontSize: 12, color: "var(--gray-500)", marginTop: 7 }}>{s.l}</div>
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: "0.07em",
+            textTransform: "uppercase",
+            color: "var(--gray-400)",
+            marginBottom: 2,
+          }}
+        >
+          Recent decisions
+        </div>
+        <div>
+          {decisions.map((d) => {
+            const c = chipTone(d.tone);
+            return (
+              <div
+                key={d.t}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "9px 0",
+                  borderTop: "1px solid var(--gray-100)",
+                }}
+              >
+                <span style={{ fontSize: 13, color: "var(--gray-700)" }}>{d.t}</span>
+                <span style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <span
+                    style={{
+                      fontSize: 11.5,
+                      fontWeight: 600,
+                      padding: "3px 9px",
+                      borderRadius: 999,
+                      background: c.bg,
+                      color: c.fg,
+                    }}
+                  >
+                    {d.o}
+                  </span>
+                  <span style={{ fontSize: 12, color: "var(--gray-400)", minWidth: 64, textAlign: "right" }}>{d.meta}</span>
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}

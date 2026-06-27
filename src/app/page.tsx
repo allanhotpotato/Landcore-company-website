@@ -1,6 +1,7 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
   EmailFeature,
+  EntitlementAnalysis,
   Hero,
   HowItWorks,
   Nav,
@@ -24,6 +25,7 @@ export default function Home() {
         <Problem />
         <Pillars />
         <HowItWorks />
+        <EntitlementAnalysis />
         <EmailFeature />
         <SyncDashboard />
         <WhoItsFor />

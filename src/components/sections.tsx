@@ -10,6 +10,7 @@ import {
   FeasibilityCard,
   Icon,
   Logo,
+  ScoreboardCard,
   SectionHead,
   Sparkle,
 } from "./core";
@@ -420,13 +421,67 @@ export function HowItWorks() {
   );
 }
 
+export function EntitlementAnalysis() {
+  return (
+    <section className="section bg-off" id="analysis">
+      <div className="container">
+        <div className="grid-2">
+          <div>
+            <span className="eyebrow">Entitlement analysis</span>
+            <h2
+              style={{
+                margin: "16px 0 0",
+                fontSize: 38,
+                lineHeight: 1.16,
+                letterSpacing: "-0.03em",
+                fontWeight: 600,
+                color: "var(--navy)",
+              }}
+            >
+              Every land consultant has a gut feeling about which cities are slow. We turned it into
+              data.
+            </h2>
+            <p style={{ margin: "20px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
+              We read the public record so you don&apos;t have to. Every hearing date, every
+              environmental filing, every approval and denial in a jurisdiction becomes a number: how
+              long this kind of project actually takes here, and how often it actually gets approved.
+            </p>
+            <p style={{ margin: "14px 0 0", fontSize: 19, lineHeight: 1.5, color: "var(--navy)", fontWeight: 600, maxWidth: 480 }}>
+              The first real scoreboard for entitlement risk.
+            </p>
+            <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
+              {[
+                "Median time to approval, by project type",
+                "Approval and denial rates per jurisdiction",
+                "Built from hearing dates, filings, and real outcomes",
+              ].map((t) => (
+                <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
+                  <Icon name="map-pinned" size={18} color="var(--blue)" /> {t}
+                </li>
+              ))}
+            </ul>
+            <div style={{ marginTop: 30 }}>
+              <Button variant="primary" icon="arrow-right" href="#demo">
+                Check a jurisdiction
+              </Button>
+            </div>
+          </div>
+          <div>
+            <ScoreboardCard />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function EmailFeature() {
   return (
     <section className="section bg-white">
       <div className="container">
         <div className="grid-2">
           <div>
-            <span className="eyebrow">Entitlement submittals · human-in-the-loop</span>
+            <span className="eyebrow">Entitlement execution · human-in-the-loop</span>
             <h2
               style={{
                 margin: "16px 0 0",
@@ -440,16 +495,18 @@ export function EmailFeature() {
               AI drafts it. A licensed expert reviews it. You approve.
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
-              Landcore drafts your entitlement applications — variances, rezonings, use permits, and
-              planning-dept emails — grounded in the actual code. A licensed land-use professional
-              reviews every one before it reaches you. Never auto-filed, never fabricated.
+              Beyond the analysis, Landcore writes and runs your entitlement process end to end:
+              applications, submittals, agency correspondence, and resubmittals for variances,
+              rezonings, and use permits. Every document is drafted by AI and signed off by a
+              licensed land-use professional before it goes out. You stay in approval; we handle the
+              rest.
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Focused on entitlements — not a black box for every permit",
+                "Run end to end: applications, submittals, resubmittals",
                 "Reviewed and signed off by a licensed expert",
-                "Cited to the code, or it honestly flags for manual review",
-                "You approve, edit, or send in one click",
+                "Cited to the code, or honestly flagged for manual review",
+                "You stay in approval — one click to send",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
                   <Icon name="badge-check" size={18} color="var(--blue)" /> {t}
@@ -458,7 +515,7 @@ export function EmailFeature() {
             </ul>
             <div style={{ marginTop: 30 }}>
               <Button variant="primary" icon="arrow-right" href="#demo">
-                See it draft a submittal
+                Hand off your entitlements
               </Button>
             </div>
           </div>
