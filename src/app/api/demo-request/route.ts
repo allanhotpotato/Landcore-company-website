@@ -6,7 +6,7 @@ import { LEAD_EMAIL } from "@/lib/config";
    POST /api/demo-request
    Validates a demo lead server-side and emails it to the team
    via Resend. Reads RESEND_API_KEY (and optional RESEND_FROM)
-   from the environment — never hard-coded.
+   from the environment - never hard-coded.
    ============================================================ */
 
 export const runtime = "nodejs";
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
-    console.error("RESEND_API_KEY is not set — cannot send demo-request email.");
+    console.error("RESEND_API_KEY is not set, cannot send demo-request email.");
     return NextResponse.json(
       { error: "Email isn't configured yet. Please email us directly." },
       { status: 500 }
@@ -50,7 +50,7 @@ export async function POST(req: Request) {
   }
 
   const resend = new Resend(apiKey);
-  const subject = `Demo request — ${name}, ${company}`;
+  const subject = `Demo request: ${name}, ${company}`;
   const text =
     `New Landcore demo request\n\n` +
     `Name:    ${name}\n` +

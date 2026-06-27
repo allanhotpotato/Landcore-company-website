@@ -1,5 +1,5 @@
 /* ============================================================
-   Landcore UI Kit — core primitives & product mockup cards
+   Landcore UI Kit - core primitives & product mockup cards
    Ported from core.jsx (CDN/Babel) to TypeScript ES modules.
    ============================================================ */
 import type { CSSProperties, ReactNode } from "react";
@@ -199,7 +199,7 @@ export function FeasibilityCard() {
         <span className="t">landcore.ai/score</span>
       </div>
       <div className="mock-banner banner-ok">
-        <Icon name="circle-check" size={15} /> Feasible — proceed to entitlement
+        <Icon name="circle-check" size={15} /> Feasible · proceed to entitlement
       </div>
       <div className="mock-body">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -264,14 +264,14 @@ export function EmailCard() {
         <span className="t">landcore.ai/outreach</span>
       </div>
       <div className="mock-banner banner-info">
-        <Sparkle /> Drafted by Landcore — ready for your approval
+        <Sparkle /> Drafted by Landcore · ready for your approval
       </div>
       <div className="mock-body">
         <div className="email-to">
           <span>To</span> <b>planning@cityofharbor.gov</b>
         </div>
         <div className="email-to">
-          <span>Re</span> <b>Variance application — 2240 Harbor Blvd</b>
+          <span>Re</span> <b>Variance application: 2240 Harbor Blvd</b>
         </div>
         <div style={{ margin: "16px 0" }}>
           <div className="email-line" style={{ width: "97%" }}></div>
@@ -297,7 +297,7 @@ export function EmailCard() {
 export function InspectionCard() {
   const items = [
     { done: true, t: "Erosion control in place", s: "BMP-3 silt fence along north property line" },
-    { done: true, t: "Footing depth verified", s: "42 in. — meets frost line per IRC R403.1.4" },
+    { done: true, t: "Footing depth verified", s: "42 in., meets frost line per IRC R403.1.4" },
     { done: false, t: "Rebar spacing & cover", s: "Confirm #4 @ 16 in. O.C., 3 in. clear cover" },
     { done: false, t: "Approved plans on site", s: "Stamped set + permit card posted at entry" },
   ];
@@ -312,7 +312,7 @@ export function InspectionCard() {
         <span className="t">landcore.ai/inspection</span>
       </div>
       <div className="mock-banner banner-warn">
-        <Icon name="clipboard-check" size={15} /> Footing inspection — tomorrow, 9:00 AM
+        <Icon name="clipboard-check" size={15} /> Footing inspection · tomorrow, 9:00 AM
       </div>
       <div className="mock-body">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>

@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 // Open Graph image for link previews (Slack, iMessage, LinkedIn, X, etc.).
 // Generated at build time as a static PNG.
 export const alt =
-  "Landcore — AI-powered site feasibility, zoning intelligence, and permit management for real estate developers.";
+  "Landcore: AI-powered site feasibility, zoning intelligence, and permit management for real estate developers.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

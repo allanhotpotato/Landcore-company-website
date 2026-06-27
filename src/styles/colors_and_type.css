@@ -1,5 +1,5 @@
 /* ============================================================
-   LANDCORE DESIGN SYSTEM — Colors & Type
+   LANDCORE DESIGN SYSTEM - Colors & Type
    "Know It. Approve It. Build It."
    Modeled on a clean, sharp, high-contrast neo-grotesque system.
    Load Geist from Google Fonts in any HTML that uses this file:
@@ -11,7 +11,7 @@
   /* ---------- CORE PALETTE ---------- */
   --white:        #FFFFFF;   /* primary background */
   --off-white:    #F7F5F0;   /* warm off-white background */
-  --navy:         #0A1130;   /* deep navy — text + dark sections */
+  --navy:         #0A1130;   /* deep navy - text + dark sections */
   --navy-800:     #121A40;   /* slightly lifted navy (cards on navy) */
   --navy-700:     #1C2550;   /* hairlines / borders inside navy */
   --blue:         #2563EB;   /* the single accent */
@@ -66,7 +66,7 @@
   --r-badge: 8px;   /* LC monogram badge */
   --r-pill: 999px;  /* chips, eyebrows, buttons-as-pills */
 
-  /* ---------- SHADOWS (soft, low-spread — product cards) ---------- */
+  /* ---------- SHADOWS (soft, low-spread - product cards) ---------- */
   --shadow-sm: 0 1px 2px rgba(10,17,48,0.06), 0 1px 1px rgba(10,17,48,0.04);
   --shadow-md: 0 4px 14px rgba(10,17,48,0.08), 0 2px 4px rgba(10,17,48,0.05);
   --shadow-lg: 0 18px 48px rgba(10,17,48,0.14), 0 4px 12px rgba(10,17,48,0.06);
@@ -198,7 +198,7 @@
   font-weight: 400;
 }
 
-/* Numeric / stat display — tabular, tight */
+/* Numeric / stat display - tabular, tight */
 .lc-stat {
   font-family: var(--font-sans);
   font-size: 56px;

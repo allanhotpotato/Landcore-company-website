@@ -1,5 +1,5 @@
 /* ============================================================
-   Landcore UI Kit — page sections (bottom)
+   Landcore UI Kit - page sections (bottom)
    Ported from bottom.jsx. Photography uses next/image; the demo
    section carries the Calendly embed + the demo-request form.
    ============================================================ */
@@ -22,7 +22,7 @@ export function WhoItsFor() {
         <SectionHead
           eyebrow="Who it's for"
           title="Built for every asset class you underwrite."
-          intro="One parcel or a hundred — Landcore scores the way each asset class actually gets approved."
+          intro="One parcel or a hundred, Landcore scores the way each asset class actually gets approved."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {cols.map((c) => (
@@ -69,7 +69,7 @@ export function Results() {
         <SectionHead
           eyebrow="Results"
           title="The math developers came for."
-          intro="Faster decisions, fewer people, lower spend — measured on real projects."
+          intro="Faster decisions, fewer people, lower spend, measured on real projects."
         />
         <div className="grid-4" style={{ marginTop: 48 }}>
           {stats.map((s) => (
@@ -193,8 +193,8 @@ export function Footer() {
           <div>
             <Logo dark />
             <p className="tagline">
-              AI-powered site feasibility, zoning intelligence, and entitlement management — with a
-              licensed expert in the loop — for real estate developers. Know it. Approve it. Build it.
+              AI-powered site feasibility, zoning intelligence, and entitlement management, with a
+              licensed expert in the loop, for real estate developers. Know it. Approve it. Build it.
             </p>
           </div>
           {cols.map((c) => (

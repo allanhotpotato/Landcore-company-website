@@ -1,5 +1,5 @@
 /* ============================================================
-   Landcore UI Kit — page sections (top + middle)
+   Landcore UI Kit - page sections (top + middle)
    Ported from sections.jsx.
    ============================================================ */
 import {
@@ -58,7 +58,7 @@ export function Hero() {
             Build it.
           </h1>
           <p className="lead">
-            Landcore scores any site, decodes the zoning, and drives the entitlements — with a
+            Landcore scores any site, decodes the zoning, and drives the entitlements, with a
             licensed expert reviewing the AI, and your whole team on one dashboard.
           </p>
           <div className="hero-cta">
@@ -170,7 +170,7 @@ export function Problem() {
     {
       icon: "search-x",
       t: "Feasibility is a guessing game",
-      d: "Five to ten consultants, six-figure spend, and months of waiting — just to learn whether a parcel pencils out.",
+      d: "Five to ten consultants, six-figure spend, and months of waiting, just to learn whether a parcel pencils out.",
     },
     {
       icon: "file-stack",
@@ -180,7 +180,7 @@ export function Problem() {
     {
       icon: "clock-alert",
       t: "Entitlements stall in the dark",
-      d: "Rezonings, variances, and approvals scatter across emails and consultants — no owner, no timeline, no next step.",
+      d: "Rezonings, variances, and approvals scatter across emails and consultants, no owner, no timeline, no next step.",
     },
   ];
   return (
@@ -210,7 +210,7 @@ export function Problem() {
 export function Pillars() {
   const pillars = [
     {
-      k: "01 — Know it",
+      k: "01 · Know it",
       t: "Know it",
       bullets: [
         "Feasibility score across 4 layers",
@@ -218,10 +218,10 @@ export function Pillars() {
         "Environmental & utility flags",
         "Entitlement & access risk",
       ],
-      advise: "file the variance before the Q3 zoning amendment — it saves a 90-day re-review.",
+      advise: "file the variance before the Q3 zoning amendment; it saves a 90-day re-review.",
     },
     {
-      k: "02 — Approve it",
+      k: "02 · Approve it",
       t: "Approve it",
       bullets: [
         "AI-drafted entitlement submittals",
@@ -232,15 +232,15 @@ export function Pillars() {
       advise: "send the pre-application request now; the planner's calendar fills 3 weeks out.",
     },
     {
-      k: "03 — Build it",
+      k: "03 · Build it",
       t: "Build it",
       bullets: [
         "One live dashboard for the project",
         "Developers, consultants & counsel in sync",
         "Every approval, owner & deadline visible",
-        "Next step — what, why, and by when",
+        "Next step: what, why, and by when",
       ],
-      advise: "loop the civil engineer in on the traffic study — it gates the rezoning hearing.",
+      advise: "loop the civil engineer in on the traffic study; it gates the rezoning hearing.",
     },
   ];
   return (
@@ -283,7 +283,7 @@ export function HowItWorks() {
   // (Federal baseline → State overlay → Local module).
   const R = 150; // vertical half-height (center → top/bottom vertex)
   const CX = 520; // shared horizontal center of the stack (== viewBox midpoint)
-  const HW = 235; // horizontal half-width — stretched wider than a regular hex
+  const HW = 235; // horizontal half-width - stretched wider than a regular hex
   const hexPoints = (cx: number, cy: number) =>
     [
       [cx, cy - R],
@@ -340,7 +340,7 @@ export function HowItWorks() {
           <svg
             viewBox="0 0 1040 850"
             role="img"
-            aria-label="Landcore architecture: a three-layer stack — Data at the base, Engines in the middle, and Intelligence on top."
+            aria-label="Landcore architecture: a three-layer stack: Data at the base, Engines in the middle, and Intelligence on top."
             style={{ width: "100%", maxWidth: 980, height: "auto" }}
           >
             <defs>
@@ -350,7 +350,7 @@ export function HowItWorks() {
             </defs>
             {layers.map((layer) => (
               <g key={layer.label}>
-                {/* hexagon outline — glowing blue edge so the boundary pops */}
+                {/* hexagon outline - glowing blue edge so the boundary pops */}
                 <polygon
                   points={hexPoints(CX, layer.cy)}
                   fill="rgba(77,119,245,0.05)"
@@ -506,7 +506,7 @@ export function EmailFeature() {
                 "Run end to end: applications, submittals, resubmittals",
                 "Reviewed and signed off by a licensed expert",
                 "Cited to the code, or honestly flagged for manual review",
-                "You stay in approval — one click to send",
+                "You stay in approval, one click to send",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
                   <Icon name="badge-check" size={18} color="var(--blue)" /> {t}
@@ -552,7 +552,7 @@ export function SyncDashboard() {
             </h2>
             <p style={{ margin: "18px 0 0", fontSize: 19, lineHeight: 1.55, color: "var(--gray-500)", maxWidth: 480 }}>
               Developers, civil engineers, architects, and land-use counsel work off the same live
-              dashboard — every entitlement, owner, deadline, and next step in one place. No relay
+              dashboard: every entitlement, owner, deadline, and next step in one place. No relay
               races, no version sprawl, no "who has the latest?"
             </p>
             <ul style={{ listStyle: "none", padding: 0, margin: "26px 0 0", display: "grid", gap: 14 }}>
@@ -560,7 +560,7 @@ export function SyncDashboard() {
                 "Every stakeholder on one shared view",
                 "Live status on each approval and study",
                 "Clear owner and due date on every item",
-                "What's next — and what's blocking it",
+                "What's next, and what's blocking it",
               ].map((t) => (
                 <li key={t} style={{ display: "flex", gap: 10, fontSize: 16, color: "var(--gray-700)" }}>
                   <Icon name="layout-dashboard" size={18} color="var(--blue)" /> {t}

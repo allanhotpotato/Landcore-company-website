@@ -55,7 +55,7 @@ export function DemoForm() {
       if (!res.ok) throw new Error(data.error || "Something went wrong.");
       setStatus({
         kind: "ok",
-        message: "Thanks — we got it. Brandon will reach out to schedule your site review.",
+        message: "Thanks, we got it. Brandon will reach out to schedule your site review.",
       });
       setFields({ name: "", company: "", email: "", message: "" });
     } catch (err) {
@@ -125,7 +125,7 @@ export function DemoForm() {
           className="lc-textarea"
           value={fields.message}
           onChange={set("message")}
-          placeholder="2240 Harbor Blvd — multifamily, ~1.2 ac…"
+          placeholder="2240 Harbor Blvd, multifamily, ~1.2 ac…"
         />
       </div>
 

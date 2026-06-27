@@ -1,5 +1,5 @@
 /* ============================================================
-   Landcore — shared site config.
+   Landcore - shared site config.
    Centralizes the few values that get wired in Phase 2 so they
    are trivial to change in one place.
    ============================================================ */
